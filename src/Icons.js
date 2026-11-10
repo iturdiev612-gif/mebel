@@ -1,0 +1,31 @@
+export default function Icon({ name, size = 22, ...props }) {
+  const paths = {
+    search: <><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 4.5 4.5" /></>,
+    heart: <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z" />,
+    bag: <><path d="M4 7h16l1 14H3L4 7Z" /><path d="M8 8V6a4 4 0 0 1 8 0v2" /></>,
+    arrow: <path d="M4 12h16m-6-6 6 6-6 6" />,
+    arrowUp: <path d="M6 18 18 6M6 6h12v12" />,
+    down: <path d="m6 9 6 6 6-6" />,
+    close: <path d="m6 6 12 12M6 18 18 6" />,
+    plus: <path d="M12 5v14M5 12h14" />,
+    minus: <path d="M5 12h14" />,
+    sun: <><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" /></>,
+    moon: <path d="M21 13A9 9 0 0 1 11 3a9 9 0 1 0 10 10Z" />,
+    phone: <path d="m7 3 3 5-3 2a15 15 0 0 0 7 7l2-3 5 3-1 4C10 23 1 14 3 4l4-1Z" />,
+    whatsapp: <><path d="M20.5 11.5a8.5 8.5 0 0 1-12.7 7.4L3 20l1.1-4.8a8.5 8.5 0 1 1 16.4-3.7Z" /><path d="M8 7.5c0 4 2.5 6.5 6.5 7l1-2-2-1-1 1a7 7 0 0 1-3-3l1-1-1-2-1.5 1Z" /></>,
+    pin: <><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" /><circle cx="12" cy="10" r="2.5" /></>,
+    grid: <><rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" /></>,
+    sofa: <><path d="M4 12V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v4M4 20v-3m16 3v-3" /><path d="M6 10a2 2 0 0 0-4 0v7h20v-7a2 2 0 0 0-4 0v3H6v-3Z" /></>,
+    bed: <path d="M3 20V5m18 15V10H3m0 7h18M7 10V6h10v4" />,
+    wardrobe: <><rect x="4" y="3" width="16" height="18" rx="1" /><path d="M12 3v18m-3-11v3m6-3v3M4 17h16" /></>,
+    kitchen: <><rect x="3" y="12" width="18" height="9" rx="1" /><path d="M9 12v9m6-9v9M3 8h18M5 8V3h6v5m4-5h4v5m-7 7v2m6-2v2m-12-2v2" /></>,
+    hanger: <path d="M10 6a2 2 0 1 1 3.5 1.3L12 9v2L2.7 17a1 1 0 0 0 .5 2h17.6a1 1 0 0 0 .5-2L12 11" />,
+    filter: <><path d="M3 6h18M3 12h18M3 18h18" /><circle cx="8" cy="6" r="2" /><circle cx="16" cy="12" r="2" /><circle cx="9" cy="18" r="2" /></>,
+    check: <path d="m5 12 4 4L19 6" />,
+    trash: <><path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7m4-7v7" /></>,
+    chat: <><path d="M21 11a8 8 0 0 1-8 8H8l-5 3V7a5 5 0 0 1 5-5h5a8 8 0 0 1 8 9Z" /><path d="M7 8h9m-9 5h6" /></>,
+    shield: <><path d="m12 2 8 3v6c0 5-8 11-8 11S4 16 4 11V5l8-3Z" /><path d="m8 11 3 3 5-6" /></>,
+    chair: <path d="M5 3h14v11H5V3ZM3 14h18v4H3zm2 4v4m14-4v4M8 6v5m4-5v5m4-5v5" />,
+  };
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>{paths[name] || paths.grid}</svg>;
+}
